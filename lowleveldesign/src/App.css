@@ -26,3 +26,23 @@
 .grey-back {
   background: lightgray;
 }
+
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 55px;
+}
+
+.nav-links {
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: nowrap;
+}
+
+a {
+  color: white;
+}
