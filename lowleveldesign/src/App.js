@@ -5,8 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Team } from './Team.js';
 import Login from './Login.js';
 import ProtectedRoute from './ProtectedRoute.js';
+import { useState } from 'react';
 
 function App() {
+  const [lang, setLang] = useState('en');
   return (
     <div className="App">
       <header className='header'>
@@ -18,6 +20,12 @@ function App() {
             <a href='/team'>Team</a>
             <a href='/login'>Login</a>
           </nav>
+
+          <select value={lang} onChange={(e)=> setLang(e.target.value)}>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ru">Russian</option>
+          </select>
         </div>
       </header>
 
@@ -25,7 +33,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Body />}></Route>
           <Route element={<ProtectedRoute />}>
-            <Route path='/about' element={<About />}></Route>
+            <Route path='/about' element={<About lang={lang}/>}></Route>
           </Route>
           <Route path='/team' element={<Team />}></Route>
           <Route path='/login' element={<Login />}></Route>
