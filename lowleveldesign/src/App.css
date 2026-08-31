@@ -52,3 +52,25 @@ a {
   font-size: 1.5rem;
   color: #000;
 }
+
+.accordian-wrapper {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.accordian-item-wrapper {
+  border: 1px solid #000;
+}
+
+.accordian-title {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.accordian-description {
+  padding: 5px;
+}
